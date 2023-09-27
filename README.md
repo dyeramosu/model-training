@@ -122,3 +122,8 @@ $IMAGE_NAME
 ### View Jobs in Vertex AI
 - Go to Vertex AI [Custom Jobs](https://console.cloud.google.com/vertex-ai/training/custom-jobs)
 - You will see the newly created job ready to be provisioned to run. 
+
+### View Training Metrics
+- Go to [WandB](https://wandb.a)
+- Select the project `mushroom-training-vertex-ai`
+- You will view the training metrics tracked and automatically updated
