@@ -62,7 +62,7 @@ We want to track our model training runs using WandB. Get the API Key for WandB:
 - Scroll down to the `API keys` sections 
 - Copy the key
 - Set an environment variable using your terminal: `export WANDB_KEY=...`
-<img src="wandb-api-key.png"  width="800">
+<img src="wandb-api-key.png"  width="400">
 
 ## Run Container
 
