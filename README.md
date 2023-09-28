@@ -31,7 +31,19 @@ In this tutorial we will setup a container to manage packaging python code for t
 ### API's to enable in GCP for Project
 Search for each of these in the GCP search bar and click enable to enable these API's
 * Vertex AI API
-* Cloud Storage API
+
+### Setup GPU Quotas
+In order to do serverless training we need access to GPUs from GCP.
+- Go to [Quotas](https://console.cloud.google.com/iam-admin/quotas) in your GCP console
+- Filter by `Quota: Custom model training` and select a GPU type, e.g: `Custom model training Nvidia T4 GPUs per region`
+
+<img src="custom-training-quota-1.png"  width="600">
+
+- 
+
+<img src="custom-training-quota-2.png"  width="600">
+<img src="custom-training-quota-3.png"  width="600">
+<img src="custom-training-quota-4.png"  width="600">
 
 ### Setup GCP Credentials
 Next step is to enable our container to have access to Storage buckets & Vertex AI(AI Platform) in  GCP. 
@@ -122,6 +134,14 @@ $IMAGE_NAME
 ### Create Jobs in Vertex AI
 - Open & Review `model-training` > `cli.sh`
 - `cli.sh` is a script file to make calling `gcloud ai custom-jobs create` easier by maintaining all the parameters in the script
+- Make any required changes to your `cli.sh` file:
+- List of `ACCELERATOR_TYPE` are:
+    - NVIDIA_TESLA_T4
+    - NVIDIA_TESLA_K80
+    - NVIDIA_TESLA_P100
+    - NVIDIA_TESLA_P4
+    - NVIDIA_TESLA_A100
+    - NVIDIA_TESLA_V100
 - Run `sh cli.sh`
 
 ### View Jobs in Vertex AI
