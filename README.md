@@ -39,11 +39,22 @@ In order to do serverless training we need access to GPUs from GCP.
 
 <img src="custom-training-quota-1.png"  width="600">
 
-- 
+- Select a few regions
 
 <img src="custom-training-quota-2.png"  width="600">
+
+- Click on `EDIT QUOTAS`
+
 <img src="custom-training-quota-3.png"  width="600">
+
+- Put in a new limit and click `NEXT`
+- Enter your Name and `SUBMIT REQUEST`
+
 <img src="custom-training-quota-4.png"  width="600">
+
+- This processes usually takes a few hours to get approved
+- Also based on how new your GCP account is, you may not be approved
+
 
 ### Setup GCP Credentials
 Next step is to enable our container to have access to Storage buckets & Vertex AI(AI Platform) in  GCP. 
