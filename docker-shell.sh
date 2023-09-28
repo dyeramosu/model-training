@@ -7,7 +7,6 @@ export BASE_DIR=$(pwd)
 export SECRETS_DIR=$(pwd)/../secrets/
 export GCS_BUCKET_URI="gs://mushroom-app-trainer"
 export GCP_PROJECT="mlproject01-207413"
-export GCP_REGION="us-central1"
 
 
 # Build the image based on the Dockerfile
@@ -21,7 +20,6 @@ docker run --rm --name $IMAGE_NAME -ti \
 -v "$SECRETS_DIR":/secrets \
 -e GOOGLE_APPLICATION_CREDENTIALS=/secrets/model-trainer.json \
 -e GCP_PROJECT=$GCP_PROJECT \
--e GCP_REGION=$GCP_REGION \
 -e GCS_BUCKET_URI=$GCS_BUCKET_URI \
 -e WANDB_KEY=$WANDB_KEY \
 $IMAGE_NAME
