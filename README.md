@@ -1,7 +1,7 @@
 # Mushroom App: Serverless Model Training Demo
 
 In this tutorial we will build a data pipeline flow as shown:
-<img src="pipeline-flow.png"  width="800">
+<img src="serverless-training.png"  width="800">
 
 ## Prerequisites
 * Have Docker installed
@@ -130,7 +130,7 @@ $IMAGE_NAME
 ### Package & Upload Python Code
 
 ### Review Trainer Code
-- Open & Review `model-training` > `setup.py`
+- Open & Review `model-training` > `package` > `setup.py`
 - All required third party libraries needed for training are specified in `setup.py`
 - Open & Review `model-training` > `package` > `trainer` > `task.py`
 - All training code for the mushroom app models are present in `task.py`
