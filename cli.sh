@@ -23,6 +23,7 @@ gcloud ai custom-jobs create \
 
 
 # Run training with No GPU
+# export EXECUTOR_IMAGE_URI="us-docker.pkg.dev/vertex-ai/training/tf-cpu.2-12.py310:latest"
 # gcloud ai custom-jobs create \
 #   --region=$GCP_REGION \
 #   --display-name=$DISPLAY_NAME \
