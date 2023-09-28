@@ -28,6 +28,11 @@ In this tutorial we will setup a container to manage packaging python code for t
 ### Clone the github repository
 - Clone or download from [here](https://github.com/dlops-io/model-training)
 
+### API's to enable in GCP for Project
+Search for each of these in the GCP search bar and click enable to enable these API's
+* Vertex AI API
+* Cloud Storage API
+
 ### Setup GCP Credentials
 Next step is to enable our container to have access to Storage buckets & Vertex AI(AI Platform) in  GCP. 
 
