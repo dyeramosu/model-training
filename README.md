@@ -104,7 +104,6 @@ export BASE_DIR=$(pwd)
 export SECRETS_DIR=$(pwd)/../secrets/
 export GCS_BUCKET_URI="gs://mushroom-app-trainer" [REPLACE WITH YOUR BUCKET NAME]
 export GCP_PROJECT="mlproject01-207413" [REPLACE WITH YOUR PROJECT]
-export GCP_REGION="us-central1"
 
 
 # Build the image based on the Dockerfile
@@ -153,6 +152,17 @@ $IMAGE_NAME
     - NVIDIA_TESLA_P4
     - NVIDIA_TESLA_A100
     - NVIDIA_TESLA_V100
+- List of some `GCP_REGION` are:
+    - us-central1
+    - us-east1
+    - us-east4
+    - us-south1
+    - us-west1
+    - ...
+- Run `sh cli.sh`
+
+### OPTIONAL:Create Jobs in Vertex AI using CPU
+- Edit your `cli.sh` to not pass the `accelerator-type` and `accelerator-count`
 - Run `sh cli.sh`
 
 ### View Jobs in Vertex AI
@@ -163,3 +173,10 @@ $IMAGE_NAME
 - Go to [WandB](https://wandb.a)
 - Select the project `mushroom-training-vertex-ai`
 - You will view the training metrics tracked and automatically updated
+
+### OPTIONAL: Multi GPU Training
+- Open & Review `model-training` > `cli-multi-gpu.sh`
+- Open & Review `model-training` > `package` > `trainer` > `task_multi_gpu.py`
+- `cli-multi-gpu.sh` is a script file to make calling `gcloud ai custom-jobs create` easier by maintaining all the parameters in the script
+- Make any required changes to your `cli-multi-gpu.sh`
+- Run `sh cli-multi-gpu.sh`
