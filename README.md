@@ -1,6 +1,6 @@
 # Mushroom App: Serverless Model Training Demo
 
-In this tutorial we will build a data pipeline flow as shown:
+In this tutorial we will move code from notebooks to a python file and then perform serverless training jobs using Vertex AI:
 <img src="serverless-training.png"  width="800">
 
 ## Prerequisites
