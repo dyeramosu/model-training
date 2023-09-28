@@ -1,3 +1,6 @@
+# List of prebuilt containers for training
+# https://cloud.google.com/vertex-ai/docs/training/pre-built-containers
+
 export UUID=$(openssl rand -hex 6)
 export DISPLAY_NAME="mushroom_training_multi_gpu_job_$UUID"
 export MACHINE_TYPE="n1-standard-4"
