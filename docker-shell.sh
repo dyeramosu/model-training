@@ -5,14 +5,14 @@ set -e
 export IMAGE_NAME=model-training-cli
 export BASE_DIR=$(pwd)
 export SECRETS_DIR=$(pwd)/../secrets/
-export GCS_BUCKET_URI="gs://mushroom-app-trainer"
-export GCP_PROJECT="mlproject01-207413"
+export GCS_BUCKET_URI="gs://mushroom-app-trainer-dy"
+export GCP_PROJECT="project1-398821"
 
 
 # Build the image based on the Dockerfile
-#docker build -t $IMAGE_NAME -f Dockerfile .
+docker build -t $IMAGE_NAME -f Dockerfile .
 # M1/2 chip macs use this line
-docker build -t $IMAGE_NAME --platform=linux/arm64/v8 -f Dockerfile .
+#docker build -t $IMAGE_NAME --platform=linux/arm64/v8 -f Dockerfile .
 
 # Run Container
 docker run --rm --name $IMAGE_NAME -ti \
